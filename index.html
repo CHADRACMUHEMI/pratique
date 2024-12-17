@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Style global */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Conteneur du formulaire */
+        form {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px 30px;
+            width: 400px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Navigation ou en-tête */
+        nav h1 {
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        /* Labels et champs */
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        /* Bouton radio */
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        /* Alignement des champs */
+        .creditcardnumber,
+        .expiration,
+        .cryptogram {
+            width: calc(100% - 20px);
+        }
+
+        .expiration,
+        .cryptogram {
+            display: inline-block;
+            width: 48%;
+        }
+
+        /* Bouton de soumission */
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Style des images */
+        img {
+            height: 20px;
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <nav>
+            <h1>Remplir le formulaire</h1>
+        </nav>
+
+        <label for="name">Nom :</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="pname">Post Nom :</label>
+        <input type="text" id="pname" name="name" required>
+
+        <label for="homme">Homme :</label>
+        <input type="radio" id="homme" name="gender" value="homme" required>
+        <label for="femme">Femme :</label>
+        <input type="radio" id="femme" name="gender" value="femme" required>
+
+        <label for="age">Âge :</label>
+        <input type="number" id="age" name="age" required>
+
+        <label for="creditcard">Carte Crédit :</label>
+        <input type="text" class="creditcardnumber" name="creditcard" placeholder="Ex: 5111111111111111" maxlength="16" required>
+
+        <label for="month">Date d'Expiration :</label>
+        <input type="text" name="month" class="expiration" maxlength="2" placeholder="MM" required>
+        <label for="cryptogram">Cryptogram :</label>
+        <input type="text" class="cryptogram" name="cryptogram" maxlength="3" placeholder="CVV" required>
+
+        <div>
+            <input type="radio" name="card" value="mastercard" checked="checked">&nbsp;&nbsp;MasterCard
+            <img src="./IMAGES/mastercard.gif" alt="MasterCard">
+            <input type="radio" name="card" value="visa">&nbsp;&nbsp;Visa
+            <img src="./IMAGES/visa.gif" alt="Visa">
+            <input type="radio" name="card" value="amex">&nbsp;&nbsp;American Express
+            <img src="./IMAGES/amex.gif" alt="American Express">
+        </div>
+
+        <input type="submit" name="payment" value="Commander et Payer">
+    </form>
+</body>
+</html>
